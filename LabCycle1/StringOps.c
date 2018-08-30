@@ -2,6 +2,57 @@
 #include<conio.h>
 //venda bhagam comment allandu aakuka
 int string_ln(char*);
+ 
+int string_ln(char*p) /* p=&str[0] */
+{
+   int count = 0;
+   while (*p != '\0') {
+      count++;
+      p++;
+   }
+   return count;
+}
+
+void concat(char s1[], char s2[]) {
+   int i, j;
+ 
+   i = strlen(s1);
+ 
+   for (j = 0; s2[j] != '\0'; i++, j++) {
+      s1[i] = s2[j];
+   }
+ 
+   s1[i] = '\0';
+}
+
+int search(char src[], char str[]) {
+   int i, j, firstOcc;
+   i = 0, j = 0;
+ 
+   while (src[i] != '\0') {
+ 
+      while (src[i] != str[0] && src[i] != '\0')
+         i++;
+ 
+      if (src[i] == '\0')
+         return (-1);
+ 
+      firstOcc = i;
+ 
+      while (src[i] == str[j] && src[i] != '\0' && str[j] != '\0') {
+         i++;
+         j++;
+      }
+ 
+      if (str[j] == '\0')
+         return (firstOcc);
+      if (src[i] == '\0')
+         return (-1);
+ 
+      i = firstOcc + 1;
+      j = 0;
+   }
+}
 
 void main() {
    /*for str length
@@ -81,55 +132,4 @@ void main() {
 
 
    getch();
-}
- 
-int string_ln(char*p) /* p=&str[0] */
-{
-   int count = 0;
-   while (*p != '\0') {
-      count++;
-      p++;
-   }
-   return count;
-}
-
-void concat(char s1[], char s2[]) {
-   int i, j;
- 
-   i = strlen(s1);
- 
-   for (j = 0; s2[j] != '\0'; i++, j++) {
-      s1[i] = s2[j];
-   }
- 
-   s1[i] = '\0';
-}
-
-int search(char src[], char str[]) {
-   int i, j, firstOcc;
-   i = 0, j = 0;
- 
-   while (src[i] != '\0') {
- 
-      while (src[i] != str[0] && src[i] != '\0')
-         i++;
- 
-      if (src[i] == '\0')
-         return (-1);
- 
-      firstOcc = i;
- 
-      while (src[i] == str[j] && src[i] != '\0' && str[j] != '\0') {
-         i++;
-         j++;
-      }
- 
-      if (str[j] == '\0')
-         return (firstOcc);
-      if (src[i] == '\0')
-         return (-1);
- 
-      i = firstOcc + 1;
-      j = 0;
-   }
 }
