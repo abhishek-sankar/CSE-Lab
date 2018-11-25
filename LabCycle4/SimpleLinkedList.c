@@ -7,10 +7,10 @@ typedef struct
 } node;
 node *HEAD = NULL;
 node *ptr = NULL;
-void InsertH();
-void InsertT();
-void DeleteH();
-void DeleteT();
+void InsertHeadeadeadead();
+void InsertTail();
+void DeleteHead();
+void DeleteTail();
 void Display();
 
 void main()
@@ -22,7 +22,7 @@ void main()
 
     for (int i = 0; i < n; i++)
     {
-        InsertH();
+        InsertHead();
     }
 
     do
@@ -33,16 +33,16 @@ void main()
         switch (ch)
         {
         case 1:
-            InsertH();
+            InsertHead();
             break;
         case 2:
-            InsertT();
+            InsertTail();
             break;
         case 3:
-            DeleteH();
+            DeleteHead();
             break;
         case 4:
-            DeleteT();
+            DeleteTail();
             break;
         case 5:
             Display();
@@ -55,7 +55,7 @@ void main()
 
     } while (ch != 6);
 }
-void InsertH()
+void InsertHead()
 {
     node *new = (node *)malloc(sizeof(node));
     printf("enter a value\n");
@@ -75,7 +75,7 @@ void InsertH()
         ptr = new;
     }
 }
-void InsertT()
+void InsertTail()
 {
     node *ptr = (node *)malloc(sizeof(node));
     node *ptr1 = (node *)malloc(sizeof(node));
@@ -93,14 +93,14 @@ void InsertT()
     ptr = ptr1->prev;
     ptr1->next = NULL;
 }
-void DeleteH()
+void DeleteHead()
 {
     node *ptr = (node *)malloc(sizeof(node));
     ptr = HEAD;
     HEAD = HEAD->next;
     free(ptr);
 }
-void DeleteT()
+void DeleteTail()
 {
     node *ptr = (node *)malloc(sizeof(node));
     node *ptr1 = (node *)malloc(sizeof(node));
