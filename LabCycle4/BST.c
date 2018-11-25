@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include <alloc.h>
-#include <conio.h>
-#include <stdio.h>
+#include <stdlib.h>
 struct tree
 {
     int info;
@@ -19,7 +17,6 @@ int main(void)
     struct tree *root;
     int choice, item, item_no;
     root = NULL;
-    clrscr();
     /* rear  = NULL;*/
     do
     {
