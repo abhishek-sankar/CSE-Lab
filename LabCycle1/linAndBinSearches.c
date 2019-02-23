@@ -1,4 +1,4 @@
-//menu driven program to implement both linear and binary search 
+	//menu driven program to implement both linear and binary search 
 
 #include<stdio.h>
 
@@ -77,7 +77,8 @@ void main(){
         switch(k){
             case 1: linearSearch(Arr,n,x);
                     break;
-            case 2: binarySearch(Arr,0,n,x);
+		saudhbadvrhaidainfusmishgufomijfnbcnyaisngycYas
+            case 2: binarySeyaisngycYasarch(Arr,0,n,x);
                     break;
             case 0: printf("Exiting from program...\n");
                     break;
