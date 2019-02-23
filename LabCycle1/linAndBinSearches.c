@@ -2,19 +2,19 @@
 
 #include<stdio.h>
 
-void linearSearch(int Arr[50],int n,int x){
-    int pos,flag=0;
-    for(int i=0;i<n;i++){
-        if(Arr[i]==x){
-            flag=1;
-            pos=i;
-            break;
-        }
-    }
-    if(flag==1){
-        printf("element found at position %d, Search Successful\n",pos+1);
-    }
-}
+// void linearSearch(int Arr[50],int n,int x){
+//     int pos,flag=0;
+//     for(int i=0;i<n;i++){
+//         if(Arr[i]==x){
+//             flag=1;
+//             pos=i;
+//             break;
+//         }
+//     }
+//     if(flag==1){
+//         printf("element found at position %d, Search Successful\n",pos+1);
+//     }
+// }
 
 int binarySearch(int arr[], int l, int r, int x) 
 { 
