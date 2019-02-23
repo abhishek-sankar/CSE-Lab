@@ -3,7 +3,7 @@
 #include<stdio.h>
 
 // void linearSearch(int Arr[50],int n,int x){
-//     int pos,flag=0;
+     int pos,flag=0;nadalsdkasdk
 //     for(int i=0;i<n;i++){
 //         if(Arr[i]==x){
 //             flag=1;
@@ -77,13 +77,11 @@ void main(){
         switch(k){
             case 1: linearSearch(Arr,n,x);
                     break;
-		saudhbadvrhaidainfusmishgufomijfnbcnyaisngycYas
-            case 2: binarySeyaisngycYasarch(Arr,0,n,x);
+	    case 2: binarySearch(Arr,0,n,x);
                     break;
             case 0: printf("Exiting from program...\n");
                     break;
             default: printf("Sorry, please enter a value from the given menu!");
-        }
-    
+        }    
     }
 }
