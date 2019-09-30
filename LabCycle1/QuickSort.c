@@ -34,10 +34,8 @@ int partition (int arr[], int low, int high)
     return (i + 1); 
 } 
   
-/* The main function that implements QuickSort 
- arr[] --> Array to be sorted, 
-  low  --> Starting index, 
-  high  --> Ending index */
+//  The main function that implements QuickSort 
+
 void quickSort(int arr[], int low, int high) 
 { 
     if (low < high) 
@@ -68,7 +66,7 @@ int main()
     int arr[] = {10, 7, 8, 9, 1, 5}; 
     int n = sizeof(arr)/sizeof(arr[0]); 
     quickSort(arr, 0, n-1); 
-    printf("Sorted array: n"); 
+    printf("The Sorted array: n"); 
     printArray(arr, n); 
     return 0; 
 } 
